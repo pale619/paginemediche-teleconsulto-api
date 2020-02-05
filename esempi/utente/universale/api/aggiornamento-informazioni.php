@@ -15,7 +15,7 @@ $headersBearer = array(
 );
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "https://auth.paginemediche.it/api/auth/user/pass"); 
+curl_setopt($ch, CURLOPT_URL, "https://auth.paginemediche.it/api/auth/user/pass");
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headersBearer);
 curl_setopt($ch, CURLOPT_VERBOSE, true);
