@@ -1,3 +1,106 @@
+# UTENTE
+API Utente Paginemediche
+
+## Prerequisito
+Avere una coppia di informazioni client_id e client_secret valida per il dominio che sta effettuando la chiamata
+
+## Chiamate API
+
+### Registrazione utente
+###### Tipo chiamata: POST
+```
+https://api.paginemediche.it/api/auth/user/registration
+
+$headers = array(
+    "domain: " . $domain
+    , "client-id: " . $client_id
+    , "client-secret: " . $client_secret
+    , "model: utente"
+);
+
+$post_fields = array(
+    "username" => "username"
+    , "email" => "prova@prova.it"
+    , "password" => "Password2020!"
+    , "name" => "Utente"
+    , "surname" => "Test"
+    , "birthday" => "1970-01-01"
+    , "town" => "Milano"
+    , "province" => "Milano"
+    , "address" => "Via Roma 1"
+    , "cap" => "20100"
+    , "cf" => "TSTTNT70A01F205P"
+    , "tel" => "3331122333"
+    , "gender" => "M"
+    , "avatar" => "LINK ASSOLUTO IMMAGINE"
+    , "referer" => $domain
+    , "created" => time()
+    , "last_update" => time()
+);
+```
+
+### Login utente
+###### Tipo chiamata: POST
+```
+https://api.paginemediche.it/api/auth/user/login
+
+$headers = array(
+    "domain: " . $domain
+    , "client-id: " . $client_id
+    , "client-secret: " . $client_secret
+    , "model: utente"
+);
+$post_fields = array(
+    "username" => "username"
+    , "password" => "Password2020!"
+);
+```
+
+### Informazioni utente
+###### Tipo chiamata: GET
+```
+https://api.paginemediche.it/api/auth/user/accessInfo
+
+$headers = array(
+    "domain: " . $domain
+    , "client-id: " . $client_id
+    , "client-secret: " . $client_secret
+    , "t: " . $token
+);
+```
+
+### Eliminazione utente
+###### Tipo chiamata: GET
+```
+https://api.paginemediche.it/api/auth/user/clearProfile
+
+$headers = array(
+    "domain: " . $domain
+    , "client-id: " . $client_id
+    , "client-secret: " . $client_secret
+    , "t: " . $token
+);
+```
+
+### Aggiornamento informazioni utente
+###### Tipo chiamata: PUT
+```
+https://api.paginemediche.it/api/auth/user/update
+https://api.paginemediche.it/api/auth/user/updateAvatar
+https://api.paginemediche.it/api/auth/user/updateName
+https://api.paginemediche.it/api/auth/user/updateSurname
+https://api.paginemediche.it/api/auth/user/updateUsername
+
+$authorization = "Authorization: Bearer " . $bearer_token;
+$headers = array(
+    $authorization
+);
+    
+$params = array('NOME_CAMPO' => $new_value);
+$url .= '?' . http_build_query($params);
+```
+
+
 # TELECONSULTO
 API Teleconsulto Paginemediche
 
