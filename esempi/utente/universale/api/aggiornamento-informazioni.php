@@ -15,7 +15,7 @@ $headersBearer = array(
 );
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "https://api.paginemediche.it/api/auth/user/pass");
+curl_setopt($ch, CURLOPT_URL, "https://auth.paginemediche.it/api/auth/user/pass"); 
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headersBearer);
 curl_setopt($ch, CURLOPT_VERBOSE, true);
@@ -38,89 +38,89 @@ if (strlen($bearer_token)) {
     switch ($field) {
         case "address":
             if ($new_value) {
-                $url = "https://api.paginemediche.it/api/auth/user/update";
+                $url = "https://auth.paginemediche.it/api/auth/user/update";
                 $params = array('address' => $new_value);
                 $url .= '?' . http_build_query($params);
             }
             break;
         case "avatar":
             if ($new_value) {
-                $url = "https://api.paginemediche.it/api/auth/user/updateAvatar";
+                $url = "https://auth.paginemediche.it/api/auth/user/updateAvatar";
                 $params = array('avatar' => $new_value);
                 $url .= '?' . http_build_query($params);
             }
             break;
         case "cap":
             if ($new_value) {
-                $url = "https://api.paginemediche.it/api/auth/user/update";
+                $url = "https://auth.paginemediche.it/api/auth/user/update";
                 $params = array('cap' => $new_value);
                 $url .= '?' . http_build_query($params);
             }
             break;
         case "cf":
             if ($new_value) {
-                $url = "https://api.paginemediche.it/api/auth/user/update";
+                $url = "https://auth.paginemediche.it/api/auth/user/update";
                 $params = array('cf' => $new_value);
                 $url .= '?' . http_build_query($params);
             }
             break;
         case "city":
             if ($new_value) {
-                $url = "https://api.paginemediche.it/api/auth/user/update";
+                $url = "https://auth.paginemediche.it/api/auth/user/update";
                 $params = array('town' => $new_value);
                 $url .= '?' . http_build_query($params);
             }
             break;
         case "dataNascita":
             if ($new_value) {
-                $url = "https://api.paginemediche.it/api/auth/user/update";
+                $url = "https://auth.paginemediche.it/api/auth/user/update";
                 $params = array('birthday' => $new_value);
                 $url .= '?' . http_build_query($params);
             }
             break;
         case "last_update":
-            $url = "https://api.paginemediche.it/api/auth/user/update";
+            $url = "https://auth.paginemediche.it/api/auth/user/update";
             $params = array('last_update' => time());
             $url .= '?' . http_build_query($params);
             break;
         case "name":
             if ($new_value) {
-                $url = "https://api.paginemediche.it/api/auth/user/updateName";
+                $url = "https://auth.paginemediche.it/api/auth/user/updateName";
                 $params = array('name' => $new_value);
                 $url .= '?' . http_build_query($params);
             }
             break;
         case "province":
             if ($new_value) {
-                $url = "https://api.paginemediche.it/api/auth/user/update";
+                $url = "https://auth.paginemediche.it/api/auth/user/update";
                 $params = array('province' => $new_value);
                 $url .= '?' . http_build_query($params);
             }
             break;
         case "sesso":
             if ($new_value) {
-                $url = "https://api.paginemediche.it/api/auth/user/update";
+                $url = "https://auth.paginemediche.it/api/auth/user/update";
                 $params = array('gender' => $new_value);
                 $url .= '?' . http_build_query($params);
             }
             break;
         case "surname":
             if ($new_value) {
-                $url = "https://api.paginemediche.it/api/auth/user/updateSurname";
+                $url = "https://auth.paginemediche.it/api/auth/user/updateSurname";
                 $params = array('surname' => $new_value);
                 $url .= '?' . http_build_query($params);
             }
             break;
         case "tel":
             if ($new_value) {
-                $url = "https://api.paginemediche.it/api/auth/user/updateTel";
+                $url = "https://auth.paginemediche.it/api/auth/user/updateTel";
                 $params = array('tel' => $new_value);
                 $url .= '?' . http_build_query($params);
             }
             break;
         case "username":
             if ($new_value) {
-                $url = "https://api.paginemediche.it/api/auth/user/updateUsername";
+                $url = "https://auth.paginemediche.it/api/auth/user/updateUsername";
                 $params = array('username' => $new_value);
                 $url .= '?' . http_build_query($params);
             }

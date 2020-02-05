@@ -9,7 +9,7 @@ Avere una coppia di informazioni client_id e client_secret valida per il dominio
 ### Registrazione utente
 ###### Tipo chiamata: POST
 ```
-https://api.paginemediche.it/api/auth/user/registration
+https://auth.paginemediche.it/api/auth/user/registration
 
 $headers = array(
     "domain: " . $domain
@@ -42,7 +42,7 @@ $post_fields = array(
 ### Login utente
 ###### Tipo chiamata: POST
 ```
-https://api.paginemediche.it/api/auth/user/login
+https://auth.paginemediche.it/api/auth/user/login
 
 $headers = array(
     "domain: " . $domain
@@ -59,7 +59,7 @@ $post_fields = array(
 ### Informazioni utente
 ###### Tipo chiamata: GET
 ```
-https://api.paginemediche.it/api/auth/user/accessInfo
+https://auth.paginemediche.it/api/auth/user/accessInfo
 
 $headers = array(
     "domain: " . $domain
@@ -72,7 +72,7 @@ $headers = array(
 ### Eliminazione utente
 ###### Tipo chiamata: GET
 ```
-https://api.paginemediche.it/api/auth/user/clearProfile
+https://auth.paginemediche.it/api/auth/user/clearProfile
 
 $headers = array(
     "domain: " . $domain
@@ -85,11 +85,11 @@ $headers = array(
 ### Aggiornamento informazioni utente
 ###### Tipo chiamata: PUT
 ```
-https://api.paginemediche.it/api/auth/user/update
-https://api.paginemediche.it/api/auth/user/updateAvatar
-https://api.paginemediche.it/api/auth/user/updateName
-https://api.paginemediche.it/api/auth/user/updateSurname
-https://api.paginemediche.it/api/auth/user/updateUsername
+https://auth.paginemediche.it/api/auth/user/update
+https://auth.paginemediche.it/api/auth/user/updateAvatar
+https://auth.paginemediche.it/api/auth/user/updateName
+https://auth.paginemediche.it/api/auth/user/updateSurname
+https://auth.paginemediche.it/api/auth/user/updateUsername
 
 $authorization = "Authorization: Bearer " . $bearer_token;
 $headers = array(
@@ -112,7 +112,7 @@ Avere una coppia di informazioni client_id e client_secret valida per il dominio
 ### Lista domande utente
 ###### Tipo chiamata: GET
 ```
-https://api.paginemediche.it/api/1.0/tc-get-patient-question-list
+https://auth.paginemediche.it/api/1.0/tc-get-patient-question-list
 
 $headers = array(
     "domain: " . $domain
@@ -125,7 +125,7 @@ $headers = array(
 ### Dettaglio domanda utente
 ###### Tipo chiamata: POST
 ```
-https://api.paginemediche.it/api/1.0/tc-get-question-detail
+https://auth.paginemediche.it/api/1.0/tc-get-question-detail
 
 $headers = array(
     "domain: " . $domain
@@ -141,7 +141,7 @@ $post_fields = array(
 ### Verifica coupon
 ###### Tipo chiamata: POST
 ```
-https://api.paginemediche.it/api/1.0/tc-get-coupon-info
+https://auth.paginemediche.it/api/1.0/tc-get-coupon-info
 
 $headers = array(
     "domain: " . $domain
@@ -157,7 +157,7 @@ $post_fields = array(
 ### Inserimento domanda utente
 ###### Tipo chiamata: POST
 ```
-https://api.paginemediche.it/api/1.0/tc-add-new-question
+https://auth.paginemediche.it/api/1.0/tc-add-new-question
 
 $headers = array(
     "domain: " . $domain
@@ -187,7 +187,7 @@ $post_fields = array(
 ### Inserimento risposta utente
 ###### Tipo chiamata: POST
 ```
-https://api.paginemediche.it/api/1.0/tc-add-patient-answer"
+https://auth.paginemediche.it/api/1.0/tc-add-patient-answer"
 
 $headers = array(
     "domain: " . $domain
@@ -234,7 +234,7 @@ Avere una coppia di informazioni client_id e client_secret valida per il dominio
 ### Lista domande dominio
 ###### Tipo chiamata: GET
 ```
-https://api.paginemediche.it/api/1.0/er-get-question-list
+https://auth.paginemediche.it/api/1.0/er-get-question-list
 
 $headers = array(
     "domain: " . $domain
@@ -246,7 +246,7 @@ $headers = array(
 ### Lista domande utente
 ###### Tipo chiamata: GET
 ```
-https://api.paginemediche.it/api/1.0/er-get-patient-question-list
+https://auth.paginemediche.it/api/1.0/er-get-patient-question-list
 
 $headers = array(
     "domain: " . $domain
@@ -259,7 +259,7 @@ $headers = array(
 ### Dettaglio domanda utente
 ###### Tipo chiamata: POST
 ```
-https://api.paginemediche.it/api/1.0/er-get-question-detail
+https://auth.paginemediche.it/api/1.0/er-get-question-detail
 
 $headers = array(
     "domain: " . $domain
@@ -275,7 +275,7 @@ $post_fields = array(
 ### Inserimento domanda utente
 ###### Tipo chiamata: POST
 ```
-https://api.paginemediche.it/api/1.0/er-add-new-question
+https://auth.paginemediche.it/api/1.0/er-add-new-question
 
 $headers = array(
     "domain: " . $domain

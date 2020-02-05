@@ -32,7 +32,7 @@ $post_fields["coupon"] = "CODICE_COUPON";
 $post_fields["attachment"] = "Allegato1;Allegato2"; /* Elenco allegati divisi da ; */
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "https://api.paginemediche.it/api/1.0/tc-add-new-question");
+curl_setopt($ch, CURLOPT_URL, "https://auth.paginemediche.it/api/1.0/tc-add-new-question");
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $post_fields);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);

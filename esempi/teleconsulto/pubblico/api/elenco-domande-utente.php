@@ -13,7 +13,7 @@ $headers = array(
 );
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "https://api.paginemediche.it/api/1.0/tc-get-patient-question-list");
+curl_setopt($ch, CURLOPT_URL, "https://auth.paginemediche.it/api/1.0/tc-get-patient-question-list");
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_VERBOSE, true);
